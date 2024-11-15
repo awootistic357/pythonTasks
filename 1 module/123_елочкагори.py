@@ -3,6 +3,9 @@ test_string = '''
 раз
 два
 три
+раз
+2
+три
 '''[1:-1].split('\n')[::-1]
 
 def input(prompt=''):
@@ -11,10 +14,12 @@ def input(prompt=''):
 	tmp = test_string.pop()
 	print(f'input = {tmp}')
 	return tmp
-word_1 = input()
-word_2 = input()
-word_3 = input()
-if word_1 == 'раз' and word_2 == 'два' and word_3 == 'три':
-    print('ГОРИ')
-else:
-    print('НЕ ГОРИ')
+for i in range(2):
+	word_1 = input()
+	word_2 = input()
+	word_3 = input()
+
+	if word_1 == 'раз' and word_2 == 'два' and word_3 == 'три':
+		print('ГОРИ')
+	else:
+		print('НЕ ГОРИ')

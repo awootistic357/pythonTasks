@@ -1,6 +1,10 @@
 test_string = '''
 парол
-пароль
+парол
+пароль123
+пароль123
+пароль123
+пароль124
 '''[1:-1].split('\n')[::-1]
 
 def input(prompt=''):
@@ -10,15 +14,16 @@ def input(prompt=''):
 	print(f'input = {tmp}')
 	return tmp
 
-password = input()
-checkpassword = input()
+for i in range(3):
+	password = input()
+	checkpassword = input()
 
-if len(password) < 8:
-    print('Пароль слишком короткий!')
-elif password != checkpassword:
-    print('Пароли различаются!')
-else:
-    print('OK')
+	if len(password) < 8:
+		print('Пароль слишком короткий!')
+	elif password != checkpassword:
+		print('Пароли различаются!')
+	else:
+		print('OK')
 
 
 
