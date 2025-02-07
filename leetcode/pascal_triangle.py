@@ -11,3 +11,4 @@ def generate(numRows: int) -> List[List[int]]:
     return triangle
 
 print(generate(5))
+#https://leetcode.com/problems/pascals-triangle/description/
